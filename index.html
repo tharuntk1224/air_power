@@ -1,0 +1,1459 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="AeroReady AI — SIH26249 Air Power: Predictive Maintenance & Fleet Availability Prototype">
+  <title>AeroReady AI | Air Power Predictive Maintenance & Fleet Availability (SIH26249)</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body class="dark-theme">
+  <!-- =================================================================== -->
+  <!-- FEATURE 1: PREMIUM AVIATION LOGIN EXPERIENCE -->
+  <!-- =================================================================== -->
+  <div class="login-screen-wrap" id="loginScreenWrap">
+    <!-- Top Bar -->
+    <header class="login-topbar">
+      <div class="login-topbar-left">
+        <svg class="login-logo-svg" viewBox="0 0 48 48" fill="none">
+          <path d="M24 4L16 20L4 24L16 28L24 44L32 28L44 24L32 20L24 4Z" fill="url(#jetGrad)" stroke="#00e5ff" stroke-width="1.5"/>
+          <circle cx="24" cy="24" r="5" fill="#00e5ff" fill-opacity="0.6"/>
+          <defs>
+            <linearGradient id="jetGrad" x1="4" y1="4" x2="44" y2="44" gradientUnits="userSpaceOnUse">
+              <stop stop-color="#0284c7" stop-opacity="0.8"/>
+              <stop offset="1" stop-color="#0369a1" stop-opacity="0.3"/>
+            </linearGradient>
+          </defs>
+        </svg>
+        <div>
+          <div class="login-brand-title">AeroReady <span class="accent-cyan">AI</span></div>
+          <div class="login-brand-subtitle">Predictive Maintenance &bull; Fleet Availability &bull; Smarter Decisions</div>
+        </div>
+      </div>
+      <div class="login-topbar-right">
+        <div><strong class="login-sih-tag">SIH26249</strong> &bull; Air Power: Predictive Maintenance &amp; Fleet Availability</div>
+        <div>Defence Aviation Benchmark &bull; Smart India Hackathon Prototype</div>
+      </div>
+    </header>
+
+    <!-- Main Body: Visual Hologram Showcase + Login Card -->
+    <main class="login-main-container">
+      <!-- Left: Interactive Holographic Jet Showcase with Health Callouts -->
+      <div class="login-visual-showcase" id="loginVisualShowcase">
+        <div class="login-visual-overlay"></div>
+
+        <!-- 7 Subsystem Health Callout Badges matching Reference Image -->
+        <div class="hologram-callout healthy callout-avionics" title="Avionics: Operating within nominal bus tolerances">
+          <svg class="callout-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg>
+          <div>
+            <strong>Avionics</strong>
+            <div style="font-size:0.65rem; opacity:0.85;">Healthy (94%)</div>
+          </div>
+        </div>
+
+        <div class="hologram-callout critical callout-engine" title="Engine: High thermal and vibration telemetry excursion detected">
+          <svg class="callout-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"></path><line x1="12" y1="9" x2="12" y2="13"></line><line x1="12" y1="17" x2="12.01" y2="17"></line></svg>
+          <div>
+            <strong>Engine</strong>
+            <div style="font-size:0.65rem; opacity:0.85;">High Risk (41%)</div>
+          </div>
+        </div>
+
+        <div class="hologram-callout warning callout-hydraulics" title="Hydraulics: Pressure return fluctuation requires line inspection">
+          <svg class="callout-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><line x1="12" y1="8" x2="12" y2="12"></line><line x1="12" y1="16" x2="12.01" y2="16"></line></svg>
+          <div>
+            <strong>Hydraulics</strong>
+            <div style="font-size:0.65rem; opacity:0.85;">Needs Inspection</div>
+          </div>
+        </div>
+
+        <div class="hologram-callout healthy callout-electrical" title="Electrical: Dual alternator buses synchronised">
+          <svg class="callout-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg>
+          <div>
+            <strong>Electrical</strong>
+            <div style="font-size:0.65rem; opacity:0.85;">Healthy (90%)</div>
+          </div>
+        </div>
+
+        <div class="hologram-callout healthy callout-landing" title="Landing Gear: Retraction cylinders and brake pads nominal">
+          <svg class="callout-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg>
+          <div>
+            <strong>Landing Gear</strong>
+            <div style="font-size:0.65rem; opacity:0.85;">Healthy (96%)</div>
+          </div>
+        </div>
+
+        <div class="hologram-callout warning callout-fuel" title="Fuel System: Feed valve filter differential alert">
+          <svg class="callout-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><line x1="12" y1="8" x2="12" y2="12"></line><line x1="12" y1="16" x2="12.01" y2="16"></line></svg>
+          <div>
+            <strong>Fuel System</strong>
+            <div style="font-size:0.65rem; opacity:0.85;">Needs Inspection</div>
+          </div>
+        </div>
+
+        <div class="hologram-callout healthy callout-controls" title="Flight Controls: Primary fly-by-wire servos responding within 12ms">
+          <svg class="callout-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg>
+          <div>
+            <strong>Flight Controls</strong>
+            <div style="font-size:0.65rem; opacity:0.85;">Healthy (92%)</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Right: Glassmorphism Login Card -->
+      <div class="login-card">
+        <div class="login-card-header">
+          <div class="login-card-logo-wrap">
+            <svg viewBox="0 0 24 24" width="28" height="28" fill="none" stroke="#00e5ff" stroke-width="2">
+              <polygon points="12 2 19 21 12 17 5 21 12 2"></polygon>
+            </svg>
+          </div>
+          <h2 class="login-card-title">AeroReady <span class="accent-cyan">AI</span></h2>
+          <p class="login-card-desc">Predictive Maintenance &amp; Fleet Availability</p>
+        </div>
+
+        <div style="border-top: 1px solid var(--border-subtle); padding-top: 10px;">
+          <h3 style="font-size: 1.05rem; font-weight: 700; color: #fff; margin-bottom: 2px;">Login to Continue</h3>
+          <p class="text-xs text-muted">Access your fleet dashboard and AI insights</p>
+        </div>
+
+        <form id="loginForm" onsubmit="event.preventDefault(); AeroApp.handleLogin();">
+          <div class="login-form-group">
+            <label for="loginUsername" class="login-form-label">Username</label>
+            <div class="login-input-wrap">
+              <svg class="login-input-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path><circle cx="12" cy="7" r="4"></circle></svg>
+              <input type="text" id="loginUsername" class="login-input" placeholder="e.g. wing.controller" value="wing.controller" required autocomplete="username">
+            </div>
+          </div>
+
+          <div class="login-form-group" style="margin-top: 10px;">
+            <label for="loginPassword" class="login-form-label">Password</label>
+            <div class="login-input-wrap">
+              <svg class="login-input-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"></rect><path d="M7 11V7a5 5 0 0 1 10 0v4"></path></svg>
+              <input type="password" id="loginPassword" class="login-input" placeholder="Enter password" value="aeroready2026" required autocomplete="current-password">
+              <button type="button" class="password-toggle-btn" id="btnTogglePassword" title="Show / Hide Password">
+                <svg id="eyeIcon" viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"></path><circle cx="12" cy="12" r="3"></circle></svg>
+              </button>
+            </div>
+          </div>
+
+          <div id="loginErrorMsg" class="text-xs text-red" style="display: none; margin-top: 6px;"></div>
+
+          <button type="submit" class="login-btn-primary" style="margin-top: 14px;">
+            <span>Login</span>
+            <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+          </button>
+        </form>
+
+        <div class="login-divider">Demo Access</div>
+
+        <button type="button" class="login-btn-demo" id="btnTryDemoMode">
+          <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="var(--cyan-primary)" stroke-width="2">
+            <circle cx="12" cy="12" r="10"></circle>
+            <circle cx="12" cy="12" r="6"></circle>
+            <line x1="12" y1="2" x2="12" y2="22"></line>
+            <line x1="2" y1="12" x2="22" y2="12"></line>
+          </svg>
+          <div style="text-align: left;">
+            <div style="font-weight: 700; color: #fff;">Try Demo Mode</div>
+            <div style="font-size: 0.68rem; color: var(--text-secondary);">Instant access with active synthetic fleet data</div>
+          </div>
+        </button>
+
+        <div class="demo-roles-group">
+          <span class="demo-roles-label">QUICK DEMO ROLES:</span>
+          <div class="demo-roles-row">
+            <button class="role-pill-btn" onclick="AeroApp.quickLoginRole('controller')">Wing Controller</button>
+            <button class="role-pill-btn" onclick="AeroApp.quickLoginRole('engineer')">Propulsion Eng</button>
+            <button class="role-pill-btn" onclick="AeroApp.quickLoginRole('commander')">Squadron Cmdr</button>
+            <button class="role-pill-btn" onclick="AeroApp.quickLoginRole('auditor')">QA Auditor</button>
+          </div>
+        </div>
+
+        <p class="login-notice">
+          Demonstration environment &bull; Synthetic telemetry &bull; Unclassified prototype
+        </p>
+      </div>
+    </main>
+
+    <!-- Bottom Bar Matching Reference Image -->
+    <footer class="login-bottombar">
+      <div class="login-overview-pill">
+        <span style="color:var(--text-secondary); font-weight:700;">System Health Overview</span>
+        <span class="text-green"><strong id="loginHealthyCount">5</strong> Healthy</span>
+        <span class="text-amber"><strong id="loginWarningCount">2</strong> Needs Attention</span>
+        <span class="text-red"><strong id="loginCriticalCount">1</strong> High Risk</span>
+      </div>
+
+      <div class="login-tagline">
+        <strong>From Data to Readiness</strong> &bull; Smarter Maintenance &bull; Higher Availability &bull; Stronger Air Power
+      </div>
+
+      <div class="login-pillars">
+        <div class="login-pillar-item">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"></polyline></svg>
+          <span>Real-time Monitoring</span>
+        </div>
+        <div class="login-pillar-item">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><path d="M12 6v6l4 2"></path></svg>
+          <span>AI-Powered Insights</span>
+        </div>
+        <div class="login-pillar-item">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="12 2 19 21 12 17 5 21 12 2"></polygon></svg>
+          <span>Fleet Readiness</span>
+        </div>
+      </div>
+    </footer>
+  </div>
+
+  <!-- Top Global Header -->
+  <header class="app-header" id="appHeader">
+    <div class="header-brand">
+      <div class="brand-radar">
+        <span class="radar-sweep"></span>
+        <span class="radar-dot"></span>
+      </div>
+      <div class="brand-text">
+        <div class="brand-title-wrap">
+          <h1 class="brand-title">AEROREADY <span class="accent-cyan">AI</span></h1>
+          <span class="sih-tag">SIH26249</span>
+        </div>
+        <p class="brand-subtitle">Air Power: Predictive Maintenance &amp; Fleet Availability</p>
+      </div>
+    </div>
+
+    <div class="header-center-metrics">
+      <div class="metric-pill">
+        <span class="metric-label">FLEET READINESS</span>
+        <span class="metric-val text-green" id="headerReadinessPct">--%</span>
+      </div>
+      <div class="metric-pill">
+        <span class="metric-label">CRITICAL RISKS</span>
+        <span class="metric-val text-red" id="headerCriticalCount">--</span>
+      </div>
+      <div class="metric-pill">
+        <span class="metric-label">ACTIVE WORK ORDERS</span>
+        <span class="metric-val text-amber" id="headerActiveOrders">--</span>
+      </div>
+    </div>
+
+    <div class="header-actions">
+      <!-- Live Ops Clock -->
+      <div class="ops-clock-box">
+        <span class="ops-clock-indicator"></span>
+        <div class="clock-details">
+          <span class="ops-clock-time" id="opsClockTime">00:00:00 UTC</span>
+          <span class="ops-clock-mode">SIMULATED OPS TIME</span>
+        </div>
+      </div>
+
+      <!-- Role Selector -->
+      <div class="role-selector-wrap">
+        <label for="userRoleSelect" class="sr-only">User Role</label>
+        <select id="userRoleSelect" class="role-select" aria-label="Select User Role">
+          <option value="controller">Role: Wing Maintenance Controller</option>
+          <option value="engineer">Role: Chief Propulsion Engineer</option>
+          <option value="commander">Role: Squadron Operations Commander</option>
+        </select>
+      </div>
+
+      <!-- 3D Shortcut Button -->
+      <button class="btn btn-secondary btn-sm" onclick="AeroApp.switchTab('aircraft3d')" title="Open Interactive 3D Aircraft Model">
+        <svg class="btn-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <polygon points="12 2 2 7 12 12 22 7 12 2"></polygon>
+          <polyline points="2 17 12 22 22 17"></polyline>
+          <polyline points="2 12 12 17 22 12"></polyline>
+        </svg>
+        <span>3D Model</span>
+      </button>
+
+      <!-- Scenario Trigger -->
+      <button class="btn btn-primary btn-glow" id="btnRunDemoScenario" title="Execute Seeded High-Risk Scenario (AR-007)">
+        <svg class="btn-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <polygon points="5 3 19 12 5 21 5 3"></polygon>
+        </svg>
+        <span>Run Demo Scenario</span>
+      </button>
+
+      <!-- Reset Demo -->
+      <button class="btn btn-outline" id="btnResetData" title="Reset all synthetic data to original baseline">
+        <svg class="btn-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <path d="M3 12a9 9 0 1 0 9-9 9.75 9.75 0 0 0-6.74 2.74L3 8"></path>
+          <path d="M3 3v5h5"></path>
+        </svg>
+        <span>Reset Data</span>
+      </button>
+
+      <!-- Logout Button -->
+      <button class="btn btn-outline btn-sm" id="btnLogout" title="Return to Login Screen">
+        <svg class="btn-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <path d="M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4"></path>
+          <polyline points="16 17 21 12 16 7"></polyline>
+          <line x1="21" y1="12" x2="9" y2="12"></line>
+        </svg>
+        <span>Logout</span>
+      </button>
+    </div>
+  </header>
+
+  <!-- Prototype Transparency Disclaimer Banner -->
+  <div class="prototype-banner">
+    <div class="banner-inner">
+      <span class="banner-badge">HACKATHON BENCHMARK PROTOTYPE</span>
+      <p class="banner-text">
+        <strong>Notice:</strong> AeroReady AI uses synthetic telemetry and transparent, explainable <em>rule-based</em> risk algorithms. Recommendations are advisory and do not represent validated aerospace engineering flight authorizations.
+      </p>
+      <span class="banner-status-badge">
+        <span class="pulse-indicator"></span> 4 SYNTHETIC FEEDS CONNECTED
+      </span>
+    </div>
+  </div>
+
+  <div class="app-layout">
+    <!-- Sidebar Navigation -->
+    <aside class="app-sidebar" id="appSidebar">
+      <nav class="sidebar-nav" aria-label="Main Navigation">
+        <div class="nav-section-label">OPERATIONS SUITE</div>
+        <button class="nav-item active" data-tab="dashboard">
+          <svg class="nav-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <rect x="3" y="3" width="7" height="9"></rect>
+            <rect x="14" y="3" width="7" height="5"></rect>
+            <rect x="14" y="12" width="7" height="9"></rect>
+            <rect x="3" y="16" width="7" height="5"></rect>
+          </svg>
+          <span class="nav-text">Dashboard Overview</span>
+        </button>
+
+        <button class="nav-item" data-tab="fleet">
+          <svg class="nav-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <polygon points="12 2 19 21 12 17 5 21 12 2"></polygon>
+          </svg>
+          <span class="nav-text">Fleet Readiness &amp; Telemetry</span>
+          <span class="nav-counter" id="navFleetCount">22</span>
+        </button>
+
+        <button class="nav-item" data-tab="aircraft3d" id="navItem3d">
+          <svg class="nav-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <polygon points="12 2 2 7 12 12 22 7 12 2"></polygon>
+            <polyline points="2 17 12 22 22 17"></polyline>
+            <polyline points="2 12 12 17 22 12"></polyline>
+          </svg>
+          <span class="nav-text">3D Aircraft Health</span>
+          <span class="nav-counter" style="background: rgba(0, 229, 255, 0.15); color: var(--cyan-primary); border: 1px solid rgba(0, 229, 255, 0.3);">3D</span>
+        </button>
+
+        <button class="nav-item" data-tab="predictive">
+          <svg class="nav-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <polyline points="22 12 18 12 15 21 9 3 6 12 2 12"></polyline>
+          </svg>
+          <span class="nav-text">Predictive Risk Engine</span>
+        </button>
+
+        <button class="nav-item" data-tab="maintenance">
+          <svg class="nav-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"></path>
+          </svg>
+          <span class="nav-text">Maintenance Queue</span>
+          <span class="nav-counter alert" id="navOpenWoCount">4</span>
+        </button>
+
+        <button class="nav-item" data-tab="simulator">
+          <svg class="nav-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <circle cx="12" cy="12" r="10"></circle>
+            <path d="M12 6v6l4 2"></path>
+            <path d="M16 16l4 4"></path>
+          </svg>
+          <span class="nav-text">Availability Simulator</span>
+        </button>
+
+        <div class="nav-section-label">LOGISTICS &amp; INTEL</div>
+        <button class="nav-item" data-tab="integration">
+          <svg class="nav-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"></path>
+            <polyline points="3.27 6.96 12 12.01 20.73 6.96"></polyline>
+            <line x1="12" y1="22.08" x2="12" y2="12"></line>
+          </svg>
+          <span class="nav-text">Data Feeds &amp; Spares</span>
+          <span class="nav-counter warning" id="navSparesAlertCount">2</span>
+        </button>
+
+        <button class="nav-item" data-tab="assistant">
+          <svg class="nav-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path>
+            <circle cx="12" cy="10" r="1"></circle>
+            <circle cx="8" cy="10" r="1"></circle>
+            <circle cx="16" cy="10" r="1"></circle>
+          </svg>
+          <span class="nav-text">Maint. AI Assistant</span>
+        </button>
+      </nav>
+
+      <!-- Sidebar Footer Badge -->
+      <div class="sidebar-footer">
+        <div class="base-location-card">
+          <span class="base-label">AIR OPS COMMAND</span>
+          <span class="base-name">Sector Northern Hangar Hub</span>
+          <span class="base-status"><span class="pulse-indicator green"></span> Operational Defcon 4</span>
+        </div>
+      </div>
+    </aside>
+
+    <!-- Main Content Area -->
+    <main class="app-main" id="appMain">
+      <!-- =================================================================== -->
+      <!-- TAB 1: DASHBOARD OVERVIEW -->
+      <!-- =================================================================== -->
+      <section class="tab-pane active" id="tab-dashboard" role="tabpanel">
+        <div class="page-header">
+          <div class="page-title-wrap">
+            <h2 class="page-title">Executive Fleet Readiness Overview</h2>
+            <p class="page-desc">Comprehensive real-time telemetry, risk classification, and operational availability KPIs across assigned squadrons.</p>
+          </div>
+          <div class="page-header-actions">
+            <button class="btn btn-secondary btn-sm" id="btnQuickScenarioAR007">
+              <span class="pulse-indicator red"></span>
+              Inspect Critical Aircraft AR-007
+            </button>
+          </div>
+        </div>
+
+        <!-- KPI Cards Grid (6 Mandatory Indicators) -->
+        <div class="kpi-grid">
+          <div class="kpi-card">
+            <div class="kpi-header">
+              <span class="kpi-title">TOTAL FLEET</span>
+              <span class="kpi-icon-wrap cyan">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="12 2 19 21 12 17 5 21 12 2"></polygon></svg>
+              </span>
+            </div>
+            <div class="kpi-value" id="kpiTotalAircraft">22</div>
+            <div class="kpi-footer">
+              <span class="kpi-badge neutral">100% Monitored</span>
+              <span class="kpi-detail">Trainer, Transport, Multirole</span>
+            </div>
+          </div>
+
+          <div class="kpi-card highlight-green">
+            <div class="kpi-header">
+              <span class="kpi-title">SERVICEABLE AIRCRAFT</span>
+              <span class="kpi-icon-wrap green">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path><polyline points="22 4 12 14.01 9 11.01"></polyline></svg>
+              </span>
+            </div>
+            <div class="kpi-value text-green" id="kpiServiceable">15</div>
+            <div class="kpi-footer">
+              <span class="kpi-badge green" id="kpiServiceablePct">68.2%</span>
+              <span class="kpi-detail">Combat Ready / Cleared</span>
+            </div>
+          </div>
+
+          <div class="kpi-card highlight-amber">
+            <div class="kpi-header">
+              <span class="kpi-title">UNDER MAINTENANCE</span>
+              <span class="kpi-icon-wrap amber">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"></path></svg>
+              </span>
+            </div>
+            <div class="kpi-value text-amber" id="kpiUnderMaint">3</div>
+            <div class="kpi-footer">
+              <span class="kpi-badge amber" id="kpiUnderMaintBays">3 Hangar Bays</span>
+              <span class="kpi-detail">Scheduled &amp; Depot work</span>
+            </div>
+          </div>
+
+          <div class="kpi-card highlight-red">
+            <div class="kpi-header">
+              <span class="kpi-title">HIGH &amp; CRITICAL RISK</span>
+              <span class="kpi-icon-wrap red">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"></path><line x1="12" y1="9" x2="12" y2="13"></line><line x1="12" y1="17" x2="12.01" y2="17"></line></svg>
+              </span>
+            </div>
+            <div class="kpi-value text-red" id="kpiHighRisk">2</div>
+            <div class="kpi-footer">
+              <span class="kpi-badge red">Priority Advisory</span>
+              <span class="kpi-detail">Breaching safety margins</span>
+            </div>
+          </div>
+
+          <div class="kpi-card highlight-cyan">
+            <div class="kpi-header">
+              <span class="kpi-title">FLEET AVAILABILITY</span>
+              <span class="kpi-icon-wrap cyan">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>
+              </span>
+            </div>
+            <div class="kpi-value text-cyan" id="kpiAvailabilityPct">68.2%</div>
+            <div class="kpi-footer">
+              <span class="kpi-badge cyan">Target: &ge; 75.0%</span>
+              <span class="kpi-detail">Serviceable / Fleet Size</span>
+            </div>
+          </div>
+
+          <div class="kpi-card">
+            <div class="kpi-header">
+              <span class="kpi-title">OPEN WORK ORDERS</span>
+              <span class="kpi-icon-wrap blue">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" y1="13" x2="8" y2="13"></line><line x1="16" y1="17" x2="8" y2="17"></line><polyline points="10 9 9 9 8 9"></polyline></svg>
+              </span>
+            </div>
+            <div class="kpi-value text-blue" id="kpiOpenOrders">4</div>
+            <div class="kpi-footer">
+              <span class="kpi-badge neutral">1 Critical &bull; 1 High</span>
+              <span class="kpi-detail">Active maintenance log</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Dashboard Charts Row -->
+        <div class="dashboard-row-2col">
+          <div class="panel-card chart-panel">
+            <div class="panel-header">
+              <div class="panel-header-title">
+                <h3>Fleet Availability Trend (Past 14 Days vs Simulated Proactive)</h3>
+                <span class="panel-tag">HISTORICAL &amp; PROJECTION</span>
+              </div>
+              <div class="chart-legend-custom">
+                <span class="legend-chip"><span class="legend-color cyan"></span> Reactive Availability</span>
+                <span class="legend-chip"><span class="legend-color green"></span> Proactive Risk Optimized</span>
+              </div>
+            </div>
+            <div class="panel-body">
+              <div class="chart-canvas-wrap">
+                <canvas id="chartAvailabilityTrend" height="230"></canvas>
+              </div>
+            </div>
+          </div>
+
+          <div class="panel-card chart-panel">
+            <div class="panel-header">
+              <div class="panel-header-title">
+                <h3>Aircraft Health Distribution (Fleet Health Index)</h3>
+                <span class="panel-tag">HEALTH SPECTRUM</span>
+              </div>
+              <span class="text-muted text-xs">Composite score 0-100</span>
+            </div>
+            <div class="panel-body">
+              <div class="chart-canvas-wrap">
+                <canvas id="chartHealthDistribution" height="230"></canvas>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Priority Attention & Component Warnings Row -->
+        <div class="dashboard-row-2col">
+          <!-- High-Risk Aircraft Priority List -->
+          <div class="panel-card">
+            <div class="panel-header">
+              <div class="panel-header-title">
+                <h3>Critical &amp; High-Risk Aircraft Priority Queue</h3>
+                <span class="panel-tag red">URGENT ACTION REQUIRED</span>
+              </div>
+              <button class="btn btn-outline btn-xs" onclick="AeroApp.switchTab('fleet')">View All Fleet</button>
+            </div>
+            <div class="panel-body no-padding">
+              <div class="table-container">
+                <table class="data-table" id="tableHighRiskPriority">
+                  <thead>
+                    <tr>
+                      <th>Aircraft ID</th>
+                      <th>Category</th>
+                      <th>Risk Score</th>
+                      <th>Dominant Risk Drivers</th>
+                      <th>Recommended Action</th>
+                      <th>Action</th>
+                    </tr>
+                  </thead>
+                  <tbody id="tbodyHighRiskPriority">
+                    <!-- Populated dynamically -->
+                  </tbody>
+                </table>
+              </div>
+            </div>
+          </div>
+
+          <!-- Component Health Warning Panel & Inspection Schedule -->
+          <div class="panel-card">
+            <div class="panel-header">
+              <div class="panel-header-title">
+                <h3>Component Health Telemetry Warnings</h3>
+                <span class="panel-tag amber">TELEMETRY ANOMALIES</span>
+              </div>
+              <span class="text-xs text-muted">Real-time threshold breaches</span>
+            </div>
+            <div class="panel-body">
+              <div class="anomaly-stream" id="anomalyStreamContainer">
+                <!-- Dynamically generated anomaly items -->
+              </div>
+
+              <div class="sub-section-divider">
+                <h4>Upcoming Inspection Schedule (&lt; 15 Days / Overdue)</h4>
+              </div>
+              <div class="inspection-chips-grid" id="inspectionScheduleGrid">
+                <!-- Dynamically populated -->
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- =================================================================== -->
+      <!-- TAB 2: FLEET MANAGEMENT & TELEMETRY -->
+      <!-- =================================================================== -->
+      <section class="tab-pane" id="tab-fleet" role="tabpanel">
+        <div class="page-header">
+          <div class="page-title-wrap">
+            <h2 class="page-title">Fleet Telemetry &amp; Service Readiness Register</h2>
+            <p class="page-desc">Comprehensive operational ledger for all 22 synthetic aircraft with multi-parameter telemetry filtering and deep diagnostics.</p>
+          </div>
+          <div class="page-header-actions">
+            <button class="btn btn-outline btn-sm" id="btnExportFleetCsv">
+              <svg class="btn-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path><polyline points="7 10 12 15 17 10"></polyline><line x1="12" y1="15" x2="12" y2="3"></line></svg>
+              Export CSV
+            </button>
+          </div>
+        </div>
+
+        <!-- Filter Controls Bar -->
+        <div class="filter-bar">
+          <div class="filter-group search-group">
+            <svg class="filter-search-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
+            <input type="text" id="fleetSearchInput" class="filter-input search-input" placeholder="Search by Aircraft ID, Callsign, Squadron...">
+          </div>
+
+          <div class="filter-group">
+            <label for="filterStatus">Status:</label>
+            <select id="filterStatus" class="filter-select">
+              <option value="ALL">All Statuses (All)</option>
+              <option value="Serviceable">Serviceable</option>
+              <option value="Inspection-Due">Inspection-Due</option>
+              <option value="Maintenance">Maintenance</option>
+              <option value="Grounded-For-Inspection">Grounded-For-Inspection</option>
+            </select>
+          </div>
+
+          <div class="filter-group">
+            <label for="filterRisk">Risk Category:</label>
+            <select id="filterRisk" class="filter-select">
+              <option value="ALL">All Risk Levels</option>
+              <option value="CRITICAL">Critical Risk</option>
+              <option value="HIGH">High Risk</option>
+              <option value="MEDIUM">Medium Risk</option>
+              <option value="LOW">Low Risk</option>
+            </select>
+          </div>
+
+          <div class="filter-group">
+            <label for="filterCategory">Airframe Type:</label>
+            <select id="filterCategory" class="filter-select">
+              <option value="ALL">All Categories</option>
+              <option value="Multirole">Multirole Fighters</option>
+              <option value="Transport">Heavy Transport</option>
+              <option value="Trainer">Advanced Trainers</option>
+              <option value="Recon">AEW&amp;C / Recon</option>
+            </select>
+          </div>
+
+          <div class="filter-group">
+            <label for="sortFleet">Sort By:</label>
+            <select id="sortFleet" class="filter-select">
+              <option value="risk-desc">Risk Score (Highest First)</option>
+              <option value="risk-asc">Risk Score (Lowest First)</option>
+              <option value="health-asc">Health Index (Lowest First)</option>
+              <option value="hours-desc">Flight Hours (Highest First)</option>
+              <option value="days-desc">Days Overdue (Highest First)</option>
+            </select>
+          </div>
+        </div>
+
+        <!-- Master Fleet Table -->
+        <div class="panel-card">
+          <div class="panel-body no-padding">
+            <div class="table-container large-table">
+              <table class="data-table" id="masterFleetTable">
+                <thead>
+                  <tr>
+                    <th>Aircraft ID</th>
+                    <th>Callsign &amp; Category</th>
+                    <th>Service Status</th>
+                    <th>Engine Temp</th>
+                    <th>Vibration</th>
+                    <th>Oil Pressure</th>
+                    <th>Flight Hours</th>
+                    <th>Inspection Cycle</th>
+                    <th>Health Index</th>
+                    <th>Risk Category</th>
+                    <th>Actions</th>
+                  </tr>
+                </thead>
+                <tbody id="masterFleetTbody">
+                  <!-- Populated by JavaScript -->
+                </tbody>
+              </table>
+            </div>
+          </div>
+          <div class="table-footer-meta">
+            <span id="fleetTableCounter">Showing 22 of 22 aircraft</span>
+            <span class="text-muted text-xs">Click any row or 'Inspect Telemetry' to launch deep subsystem diagnostics</span>
+          </div>
+        </div>
+      </section>
+
+      <!-- =================================================================== -->
+      <!-- FEATURE 2 & 3: 3D AIRCRAFT HEALTH & SUBSYSTEM EXPLORER -->
+      <!-- =================================================================== -->
+      <section class="tab-pane" id="tab-aircraft3d" role="tabpanel">
+        <div class="page-header">
+          <div class="page-title-wrap">
+            <h2 class="page-title">Interactive 3D Aircraft Subsystem Health Model</h2>
+            <p class="page-desc">Holographic airframe structural visualization mapped live to telemetry sensors, subsystem records, and maintenance priority rules.</p>
+          </div>
+          <div class="page-header-actions">
+            <!-- Searchable Aircraft Selector -->
+            <div class="filter-group">
+              <label for="select3dAircraft" style="font-weight: 700; color: #fff;">Airframe:</label>
+              <select id="select3dAircraft" class="filter-select" onchange="AeroApp.select3dAircraft(this.value)">
+                <!-- Populated dynamically with all 22 aircraft -->
+              </select>
+            </div>
+            <button class="btn btn-secondary btn-sm" id="btnQuick3dAR007" title="Inspect AR-007 Critical Anomaly in 3D">
+              <span class="pulse-indicator red"></span>
+              Inspect AR-007 Anomaly
+            </button>
+          </div>
+        </div>
+
+        <!-- 3D Airframe Overview Bar -->
+        <div class="explain-summary-card" id="banner3dAirframeStatus" style="margin-bottom: 16px;">
+          <!-- Populated dynamically by JavaScript -->
+        </div>
+
+        <!-- 3D Viewport & Dossier Grid -->
+        <div class="viewer-3d-layout">
+          <!-- Left: 3D Canvas Card -->
+          <div class="viewer-3d-card">
+            <!-- Floating 3D Toolbar -->
+            <div class="viewer-3d-toolbar">
+              <button class="toolbar-btn" id="btnReset3dCamera" title="Reset Camera to Standard 3/4 Perspective">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 12a9 9 0 1 0 9-9 9.75 9.75 0 0 0-6.74 2.74L3 8"></path><path d="M3 3v5h5"></path></svg>
+                <span>Reset View</span>
+              </button>
+              <button class="toolbar-btn" id="btnToggleWireframe" title="Toggle X-Ray Wireframe Hologram">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect><line x1="3" y1="9" x2="21" y2="9"></line><line x1="3" y1="15" x2="21" y2="15"></line><line x1="9" y1="3" x2="9" y2="21"></line><line x1="15" y1="3" x2="15" y2="21"></line></svg>
+                <span>X-Ray Wireframe</span>
+              </button>
+              <button class="toolbar-btn" id="btnToggleAutoRotate" title="Toggle Slow Tactical Orbit">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>
+                <span id="lblAutoRotate">Auto Orbit: ON</span>
+              </button>
+              <button class="toolbar-btn" id="btnToggleExploded" title="Explode / Assemble Subsystems View">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="15 3 21 3 21 9"></polyline><polyline points="9 21 3 21 3 15"></polyline><line x1="21" y1="3" x2="14" y2="10"></line><line x1="3" y1="21" x2="10" y2="14"></line></svg>
+                <span>Exploded View</span>
+              </button>
+              <button class="toolbar-btn" id="btnTogglePins" title="Toggle 3D Subsystem Callout Badges">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><polygon points="12 8 8 12 12 16 16 12 12 8"></polygon></svg>
+                <span id="lblTogglePins">Callouts: ON</span>
+              </button>
+            </div>
+
+            <!-- Canvas Viewport -->
+            <div class="viewer-3d-canvas-wrap" id="threeJsViewportContainer">
+              <canvas id="threeJsCanvas"></canvas>
+              <div class="threejs-tooltip" id="threeJsTooltip"></div>
+            </div>
+
+            <!-- Floating Legend & Navigation Guide -->
+            <div class="viewer-3d-legend">
+              <span><span class="legend-indicator-dot green"></span> Healthy (&gt;80)</span>
+              <span><span class="legend-indicator-dot amber"></span> Needs Monitoring (60-79)</span>
+              <span><span class="legend-indicator-dot red"></span> High Priority (&lt;60 / Anomaly)</span>
+              <span><span class="legend-indicator-dot grey"></span> Unassessed</span>
+            </div>
+            <div class="viewer-3d-guide">
+              Drag: Rotate &bull; Scroll: Zoom &bull; Right-Click: Pan &bull; Click Subsystem to Inspect
+            </div>
+          </div>
+
+          <!-- Right: Component Dossier Sidebar -->
+          <div class="viewer-3d-sidebar">
+            <!-- Subsystems Compact Matrix -->
+            <div class="component-status-card">
+              <div class="comp-card-header">
+                <h3 class="comp-card-title">Subsystems Health Matrix</h3>
+                <span class="comp-source-tag">LIVE TELEMETRY SYNC</span>
+              </div>
+              <p class="text-xs text-muted">Click any subsystem to focus in 3D:</p>
+              <div class="subsystems-list-compact" id="subsystems3dListContainer">
+                <!-- Populated dynamically -->
+              </div>
+            </div>
+
+            <!-- Deep Component Details Card -->
+            <div class="component-status-card" id="compDetailCard">
+              <!-- Populated dynamically when a component is clicked -->
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- =================================================================== -->
+      <!-- TAB 3: PREDICTIVE MAINTENANCE ENGINE & EXPLAINABILITY -->
+      <!-- =================================================================== -->
+      <section class="tab-pane" id="tab-predictive" role="tabpanel">
+        <div class="page-header">
+          <div class="page-title-wrap">
+            <h2 class="page-title">Transparent &amp; Explainable Risk Engine</h2>
+            <p class="page-desc">Mathematical rule-based scoring engine with fully transparent feature weighting and interactive threshold calibration.</p>
+          </div>
+          <div class="page-header-actions">
+            <span class="badge badge-outline-cyan">Deterministic Mathematical Model</span>
+          </div>
+        </div>
+
+        <div class="explainability-hero">
+          <div class="algorithm-card">
+            <div class="algo-header">
+              <span class="algo-tag">MATHEMATICAL FORMULATION</span>
+              <h3>Composite Risk Scoring Model: $R = \sum_{i} (w_i \times \Delta_i)$</h3>
+            </div>
+            <p class="algo-explanation">
+              AeroReady AI intentionally avoids "black-box" machine learning predictions for flight-critical governance. Instead, it computes an objective, normalized composite risk score ($0 - 100$) derived from 7 telemetry vectors relative to engineering limits.
+            </p>
+            <div class="weights-grid">
+              <div class="weight-chip">
+                <span class="w-name">Exhaust Gas Temp (EGT)</span>
+                <span class="w-val">Weight: 25%</span>
+                <span class="w-formula">$\Delta > 780^\circ\text{C}$</span>
+              </div>
+              <div class="weight-chip">
+                <span class="w-name">Bearing Vibration</span>
+                <span class="w-val">Weight: 20%</span>
+                <span class="w-formula">$\Delta > 0.45\text{ IPS}$</span>
+              </div>
+              <div class="weight-chip">
+                <span class="w-name">Oil Pressure Delta</span>
+                <span class="w-val">Weight: 15%</span>
+                <span class="w-formula">$\Delta < 42\text{ PSI}$</span>
+              </div>
+              <div class="weight-chip">
+                <span class="w-name">Flight Hour Load</span>
+                <span class="w-val">Weight: 10%</span>
+                <span class="w-formula">$Hours / 1500$</span>
+              </div>
+              <div class="weight-chip">
+                <span class="w-name">Component Age</span>
+                <span class="w-val">Weight: 10%</span>
+                <span class="w-formula">$Years / 10$</span>
+              </div>
+              <div class="weight-chip">
+                <span class="w-name">Inspection Interval</span>
+                <span class="w-val">Weight: 10%</span>
+                <span class="w-formula">$\Delta > 45\text{ days}$</span>
+              </div>
+              <div class="weight-chip">
+                <span class="w-name">Fault Log History</span>
+                <span class="w-val">Weight: 10%</span>
+                <span class="w-formula">$Count \times 2.5$</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Interactive Threshold Configurator & Live Recalculation -->
+        <div class="dashboard-row-2col">
+          <div class="panel-card">
+            <div class="panel-header">
+              <div class="panel-header-title">
+                <h3>Operational Threshold Configurator</h3>
+                <span class="panel-tag">CALIBRATE SAFETY LIMITS</span>
+              </div>
+              <button class="btn btn-outline btn-xs" id="btnResetThresholds">Restore Standard</button>
+            </div>
+            <div class="panel-body">
+              <div class="slider-control-group">
+                <div class="slider-header">
+                  <label for="cfgTempWarn">Turbine Temp Warning Threshold (°C):</label>
+                  <span class="slider-val" id="valTempWarn">780 °C</span>
+                </div>
+                <input type="range" id="cfgTempWarn" min="700" max="850" step="5" value="780" class="range-slider">
+                <span class="slider-caption">Baseline nominal: 700-750°C. Exceeding triggers thermal stress factor.</span>
+              </div>
+
+              <div class="slider-control-group">
+                <div class="slider-header">
+                  <label for="cfgVibWarn">Vibration Warning Threshold (IPS):</label>
+                  <span class="slider-val" id="valVibWarn">0.45 IPS</span>
+                </div>
+                <input type="range" id="cfgVibWarn" min="0.30" max="0.70" step="0.01" value="0.45" class="range-slider">
+                <span class="slider-caption">Measures rotational bearing imbalance in Inches Per Second.</span>
+              </div>
+
+              <div class="slider-control-group">
+                <div class="slider-header">
+                  <label for="cfgOilMin">Minimum Safe Oil Pressure (PSI):</label>
+                  <span class="slider-val" id="valOilMin">42 PSI</span>
+                </div>
+                <input type="range" id="cfgOilMin" min="30" max="50" step="1" value="42" class="range-slider">
+                <span class="slider-caption">Below 42 PSI induces severe lubrication degradation risk.</span>
+              </div>
+
+              <div class="slider-control-group">
+                <div class="slider-header">
+                  <label for="cfgInspDays">Standard Periodic Inspection Cycle (Days):</label>
+                  <span class="slider-val" id="valInspDays">45 Days</span>
+                </div>
+                <input type="range" id="cfgInspDays" min="30" max="90" step="5" value="45" class="range-slider">
+                <span class="slider-caption">Standard maintenance interval. Overdue days incur non-linear risk escalation.</span>
+              </div>
+
+              <div class="threshold-action-row">
+                <button class="btn btn-primary btn-sm" id="btnApplyThresholds">Recalculate All Fleet Risk Scores</button>
+                <span class="text-xs text-muted">Updates calculations across all 22 aircraft immediately.</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Live Explainability Deep Dive for Selected Aircraft -->
+          <div class="panel-card">
+            <div class="panel-header">
+              <div class="panel-header-title">
+                <h3>Live Aircraft Risk Breakdown</h3>
+                <span class="panel-tag cyan">EXPLAINABLE TELEMETRY</span>
+              </div>
+              <div class="select-inline-wrap">
+                <label for="selectExplainAircraft" class="sr-only">Select Aircraft to Inspect</label>
+                <select id="selectExplainAircraft" class="filter-select sm">
+                  <!-- Populated with all aircraft -->
+                </select>
+              </div>
+            </div>
+            <div class="panel-body">
+              <div class="explain-summary-card" id="explainSummaryBox">
+                <!-- Populated dynamically -->
+              </div>
+              <div class="factor-breakdown-list" id="explainFactorsList">
+                <!-- Populated dynamically with percentage contributions -->
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- =================================================================== -->
+      <!-- TAB 4: MAINTENANCE PLANNING & WORK ORDERS -->
+      <!-- =================================================================== -->
+      <section class="tab-pane" id="tab-maintenance" role="tabpanel">
+        <div class="page-header">
+          <div class="page-title-wrap">
+            <h2 class="page-title">Maintenance Planning &amp; Work Order Queue</h2>
+            <p class="page-desc">Priority-ranked task dispatch system with technician assignments, spare part linkage, and localStorage state persistence.</p>
+          </div>
+          <div class="page-header-actions">
+            <button class="btn btn-primary btn-sm" id="btnOpenCreateWoModal">
+              <svg class="btn-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="12" y1="5" x2="12" y2="19"></line><line x1="5" y1="12" x2="19" y2="12"></line></svg>
+              Create Inspection Work Order
+            </button>
+          </div>
+        </div>
+
+        <!-- Work Order Metric Quick Filters -->
+        <div class="wo-filter-bar">
+          <button class="wo-filter-chip active" data-wo-filter="ALL">All Work Orders (<span id="woFilterCountAll">4</span>)</button>
+          <button class="wo-filter-chip" data-wo-filter="In Progress">In Progress (<span id="woFilterCountProgress">2</span>)</button>
+          <button class="wo-filter-chip" data-wo-filter="Open">Open (<span id="woFilterCountOpen">1</span>)</button>
+          <button class="wo-filter-chip" data-wo-filter="Awaiting Parts">Awaiting Parts (<span id="woFilterCountParts">1</span>)</button>
+          <button class="wo-filter-chip" data-wo-filter="Completed">Completed (<span id="woFilterCountCompleted">0</span>)</button>
+        </div>
+
+        <!-- Work Order Cards Grid / List -->
+        <div class="wo-cards-grid" id="woCardsContainer">
+          <!-- Populated dynamically by JavaScript -->
+        </div>
+      </section>
+
+      <!-- =================================================================== -->
+      <!-- TAB 5: FLEET AVAILABILITY & WHAT-IF SIMULATOR -->
+      <!-- =================================================================== -->
+      <section class="tab-pane" id="tab-simulator" role="tabpanel">
+        <div class="page-header">
+          <div class="page-title-wrap">
+            <h2 class="page-title">Fleet Availability &amp; What-If Scenario Simulator</h2>
+            <p class="page-desc">Quantitative simulation modeling the impact of proactive risk scheduling vs reactive failure downtime on overall air power availability.</p>
+          </div>
+        </div>
+
+        <!-- Simulator Core Formula Explanation -->
+        <div class="simulator-formula-banner">
+          <div class="formula-box">
+            <span class="formula-tag">MATHEMATICAL FORMULA</span>
+            <div class="formula-text">
+              $$\text{Fleet Availability } A = \frac{N_{\text{serviceable}}}{N_{\text{total}}} \times 100\% = \frac{N_{\text{total}} - (N_{\text{scheduled}} + N_{\text{unscheduled\_failures}})}{N_{\text{total}}} \times 100\%$$
+            </div>
+            <p class="formula-sub">
+              <strong>Trade-off Principle:</strong> Proactive servicing incurs predictable planned minor downtime (8–14 hrs) but prevents catastrophic component seizure that causes uncontained failure (28–60 hrs downtime + emergency part backorders).
+            </p>
+          </div>
+        </div>
+
+        <div class="dashboard-row-2col">
+          <!-- Simulator Controls -->
+          <div class="panel-card">
+            <div class="panel-header">
+              <div class="panel-header-title">
+                <h3>Simulation Parameter Controls</h3>
+                <span class="panel-tag cyan">ADJUST EXPERIMENTAL VARIABLES</span>
+              </div>
+              <button class="btn btn-outline btn-xs" id="btnResetSimParams">Defaults</button>
+            </div>
+            <div class="panel-body">
+              <div class="slider-control-group">
+                <div class="slider-header">
+                  <label for="simProactiveTurnaround">Proactive Planned Turnaround (Hours):</label>
+                  <span class="slider-val" id="valSimProactiveTurnaround">12 hrs</span>
+                </div>
+                <input type="range" id="simProactiveTurnaround" min="4" max="24" step="1" value="12" class="range-slider">
+                <span class="slider-caption">Average time required for early component swap or borescope inspection.</span>
+              </div>
+
+              <div class="slider-control-group">
+                <div class="slider-header">
+                  <label for="simReactiveDowntime">Unscheduled Failure Mean Downtime (Hours):</label>
+                  <span class="slider-val" id="valSimReactiveDowntime">36 hrs</span>
+                </div>
+                <input type="range" id="simReactiveDowntime" min="20" max="72" step="2" value="36" class="range-slider">
+                <span class="slider-caption">Average repair time when an aircraft suffers unexpected catastrophic in-flight or runway abort.</span>
+              </div>
+
+              <div class="slider-control-group">
+                <div class="slider-header">
+                  <label for="simHangarCapacity">Hangar Bay Simultaneous Capacity:</label>
+                  <span class="slider-val" id="valSimHangarCapacity">4 bays</span>
+                </div>
+                <input type="range" id="simHangarCapacity" min="2" max="8" step="1" value="4" class="range-slider">
+                <span class="slider-caption">Physical facility limit for active maintenance across the air base.</span>
+              </div>
+
+              <div class="slider-control-group">
+                <div class="slider-header">
+                  <label for="simAdherenceRate">Proactive Maintenance Adoption Rate (%):</label>
+                  <span class="slider-val" id="valSimAdherenceRate">85 %</span>
+                </div>
+                <input type="range" id="simAdherenceRate" min="20" max="100" step="5" value="85" class="range-slider">
+                <span class="slider-caption">Percentage of high-risk advisories addressed proactively before component failure.</span>
+              </div>
+
+              <div class="threshold-action-row">
+                <button class="btn btn-primary btn-sm" id="btnExecuteSimulation">Run Comparative Simulation</button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Scenario Comparison Output -->
+          <div class="panel-card">
+            <div class="panel-header">
+              <div class="panel-header-title">
+                <h3>Comparative Scenario Projections</h3>
+                <span class="panel-tag green">PREDICTIVE OUTCOME</span>
+              </div>
+            </div>
+            <div class="panel-body">
+              <div class="scenario-comparison-cards">
+                <div class="scenario-card reactive">
+                  <div class="scenario-card-header">
+                    <span class="scenario-badge red">SCENARIO A: REACTIVE</span>
+                    <h4>Run-to-Failure Maintenance</h4>
+                  </div>
+                  <div class="scenario-metric">
+                    <span class="scen-val text-red" id="simReactiveAvailPct">59.1%</span>
+                    <span class="scen-label">Projected Availability</span>
+                  </div>
+                  <ul class="scenario-bullet-list">
+                    <li><strong id="simReactiveServiceable">13</strong> Serviceable aircraft ready</li>
+                    <li><strong id="simReactiveUnavailable">9</strong> Grounded / Awaiting depot spares</li>
+                    <li>Unscheduled failures create hangar bottlenecks</li>
+                    <li>Average downtime: <span id="lblReactiveMeanHrs">36</span> hrs / airframe</li>
+                  </ul>
+                </div>
+
+                <div class="scenario-card proactive">
+                  <div class="scenario-card-header">
+                    <span class="scenario-badge green">SCENARIO B: AEROREADY AI</span>
+                    <h4>Risk-Prioritized Planned Maintenance</h4>
+                  </div>
+                  <div class="scenario-metric">
+                    <span class="scen-val text-green" id="simProactiveAvailPct">81.8%</span>
+                    <span class="scen-label">Projected Availability</span>
+                  </div>
+                  <ul class="scenario-bullet-list">
+                    <li><strong id="simProactiveServiceable">18</strong> Serviceable aircraft ready</li>
+                    <li><strong id="simProactiveUnavailable">4</strong> Scheduled minor servicing</li>
+                    <li>Pre-staged spares prevent logistic backorders</li>
+                    <li>Planned downtime: <span id="lblProactiveMeanHrs">12</span> hrs / airframe</li>
+                  </ul>
+                </div>
+              </div>
+
+              <!-- Net Gain Summary Banner -->
+              <div class="net-gain-banner">
+                <div class="net-gain-pill">
+                  <span class="gain-label">NET FLEET READINESS DELTA</span>
+                  <span class="gain-val text-cyan" id="simNetDeltaPct">+22.7% Availability Boost</span>
+                </div>
+                <p class="gain-explanation" id="simGainExplanation">
+                  By acting on early thermal and vibration anomalies in high-risk airframes like AR-007, the base converts 5 unexpected long-duration depot groundings into scheduled short-duration servicing cycles.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- =================================================================== -->
+      <!-- TAB 6: DATA FEEDS & SPARE PARTS SUPPLY CHAIN -->
+      <!-- =================================================================== -->
+      <section class="tab-pane" id="tab-integration" role="tabpanel">
+        <div class="page-header">
+          <div class="page-title-wrap">
+            <h2 class="page-title">Enterprise Data Integration &amp; Logistics Gateway</h2>
+            <p class="page-desc">Simulated connectivity feeds across avionics bus telemetry, technical records, inventory databases, and hangar capacity.</p>
+          </div>
+          <div class="page-header-actions">
+            <span class="connection-status-pill online">
+              <span class="pulse-indicator green"></span>
+              All 4 Gateway Feeds Synchronized
+            </span>
+          </div>
+        </div>
+
+        <!-- 4 Gateway Cards -->
+        <div class="integration-grid" id="integrationFeedsContainer">
+          <!-- Populated by JavaScript from dataset -->
+        </div>
+
+        <!-- Spare Parts Inventory Table -->
+        <div class="panel-card" style="margin-top: 24px;">
+          <div class="panel-header">
+            <div class="panel-header-title">
+              <h3>Base Aviation Depot Inventory &amp; Critical Spares Catalog</h3>
+              <span class="panel-tag">LOGISTICS LINKAGE</span>
+            </div>
+            <span class="text-xs text-muted">Directly referenced in Maintenance Work Order workflows</span>
+          </div>
+          <div class="panel-body no-padding">
+            <div class="table-container">
+              <table class="data-table" id="sparesTable">
+                <thead>
+                  <tr>
+                    <th>Part Number</th>
+                    <th>Component Name</th>
+                    <th>Category</th>
+                    <th>Stock / Min Required</th>
+                    <th>Lead Time</th>
+                    <th>Unit Cost</th>
+                    <th>Status</th>
+                    <th>Action</th>
+                  </tr>
+                </thead>
+                <tbody id="sparesTbody">
+                  <!-- Populated dynamically -->
+                </tbody>
+              </table>
+            </div>
+          </div>
+          <div class="table-footer-meta">
+            <span>Critical components (Turbine Blades, Radial Roller Bearings) are pre-allocated for AR-007 and AR-013 work orders.</span>
+          </div>
+        </div>
+      </section>
+
+      <!-- =================================================================== -->
+      <!-- TAB 7: MAINTENANCE INTELLIGENCE ASSISTANT -->
+      <!-- =================================================================== -->
+      <section class="tab-pane" id="tab-assistant" role="tabpanel">
+        <div class="page-header">
+          <div class="page-title-wrap">
+            <h2 class="page-title">Maintenance Intelligence Assistant</h2>
+            <p class="page-desc">Deterministic offline question-answering assistant running entirely in-browser without external APIs or cloud dependencies.</p>
+          </div>
+          <div class="page-header-actions">
+            <span class="badge badge-outline-cyan">100% Offline Rule-Based Engine</span>
+          </div>
+        </div>
+
+        <div class="assistant-container">
+          <!-- Left: Query Suggester & Capabilities -->
+          <div class="assistant-sidebar">
+            <div class="panel-card">
+              <div class="panel-header">
+                <div class="panel-header-title">
+                  <h3>Suggested Operational Inquiries</h3>
+                </div>
+              </div>
+              <div class="panel-body">
+                <p class="text-xs text-muted" style="margin-bottom: 12px;">Click any preset command to query the active fleet state:</p>
+                <div class="query-chips-list">
+                  <button class="query-chip" data-query="Which aircraft need attention first?">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><line x1="12" y1="8" x2="12" y2="12"></line><line x1="12" y1="16" x2="12.01" y2="16"></line></svg>
+                    Which aircraft need attention first?
+                  </button>
+
+                  <button class="query-chip" data-query="Why is aircraft AR-007 flagged as critical risk?">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="12 2 19 21 12 17 5 21 12 2"></polygon></svg>
+                    Why is aircraft AR-007 high risk?
+                  </button>
+
+                  <button class="query-chip" data-query="What is currently reducing fleet availability?">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"></polyline></svg>
+                    What is reducing fleet availability?
+                  </button>
+
+                  <button class="query-chip" data-query="Which aircraft have overdue inspections?">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect><line x1="16" y1="2" x2="16" y2="6"></line><line x1="8" y1="2" x2="8" y2="6"></line><line x1="3" y1="10" x2="21" y2="10"></line></svg>
+                    Which aircraft have overdue inspections?
+                  </button>
+
+                  <button class="query-chip" data-query="What are the highest-priority open work orders?">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline></svg>
+                    What are highest-priority work orders?
+                  </button>
+
+                  <button class="query-chip" data-query="Show critical spare part shortages">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"></path></svg>
+                    Show critical spare parts shortages
+                  </button>
+                </div>
+
+                <div class="assistant-guardrail-note">
+                  <strong>Non-LLM Guarantee:</strong> Answers cite specific telemetry values, delta calculations, and work-order records directly from the client dataset. No hallucinated values.
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Right: Interactive Chat Display -->
+          <div class="assistant-chat-panel panel-card">
+            <div class="panel-header">
+              <div class="panel-header-title">
+                <span class="pulse-indicator green"></span>
+                <h3>Tactical Maintenance Intelligence Console</h3>
+              </div>
+              <button class="btn btn-outline btn-xs" id="btnClearChat">Clear Console</button>
+            </div>
+
+            <div class="chat-messages-container" id="chatMessagesContainer">
+              <!-- Initial Welcome Message -->
+              <div class="chat-msg system">
+                <div class="msg-avatar">AI</div>
+                <div class="msg-body">
+                  <div class="msg-meta">AeroReady Intelligence Kernel &bull; Active &bull; Ready</div>
+                  <div class="msg-content">
+                    <p>Welcome to the AeroReady AI Maintenance Intelligence Console. I query live telemetry records, threshold breaches, and the work-order queue in real time.</p>
+                    <p>Select any inquiry chip on the left, or enter an aircraft ID (e.g., <em>"AR-007"</em>, <em>"AR-013"</em>, or <em>"Explain risk"</em>) below.</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="chat-input-bar">
+              <input type="text" id="chatInputText" class="chat-input" placeholder="Enter inquiry (e.g. 'Why is AR-007 high risk?' or 'Status of transport aircraft')..." autocomplete="off">
+              <button class="btn btn-primary" id="btnSendChat">
+                <span>Query</span>
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="22" y1="2" x2="11" y2="13"></line><polygon points="22 2 15 22 11 13 2 9 22 2"></polygon></svg>
+              </button>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+  </div>
+
+  <!-- =================================================================== -->
+  <!-- MODAL 1: AIRCRAFT DEEP INSPECTION & SUBSYSTEM DIAGNOSTICS -->
+  <!-- =================================================================== -->
+  <div class="modal-backdrop" id="modalAircraftDetail" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+      <div class="modal-header">
+        <div class="modal-header-titles">
+          <div class="modal-tag" id="modalAircraftCategoryTag">MULTIFUNCTIONAL FIGHTER</div>
+          <h3 class="modal-title" id="modalAircraftTitle">AR-007 &bull; RUDRA-07</h3>
+        </div>
+        <button class="modal-close-btn" id="btnCloseDetailModal" aria-label="Close dialog">&times;</button>
+      </div>
+
+      <div class="modal-body" id="modalAircraftBody">
+        <!-- Telemetry Summary Cards -->
+        <div class="modal-summary-grid">
+          <div class="modal-sum-card">
+            <span class="sum-label">CURRENT STATUS</span>
+            <span class="sum-val" id="modalStatusBadge">--</span>
+          </div>
+          <div class="modal-sum-card">
+            <span class="sum-label">RISK SCORE</span>
+            <span class="sum-val" id="modalRiskScoreVal">--</span>
+          </div>
+          <div class="modal-sum-card">
+            <span class="sum-label">HEALTH INDEX</span>
+            <span class="sum-val" id="modalHealthIndexVal">--</span>
+          </div>
+          <div class="modal-sum-card">
+            <span class="sum-label">SQUADRON / BASE</span>
+            <span class="sum-val text-sm" id="modalBaseVal">--</span>
+          </div>
+        </div>
+
+        <!-- Telemetry Parameter Table -->
+        <div class="modal-section-card">
+          <h4 class="section-heading">Operational Telemetry vs Engineering Thresholds</h4>
+          <div class="table-container">
+            <table class="data-table">
+              <thead>
+                <tr>
+                  <th>Telemetry Parameter</th>
+                  <th>Observed Value</th>
+                  <th>Configured Threshold</th>
+                  <th>Variance / Status</th>
+                </tr>
+              </thead>
+              <tbody id="modalTelemetryTbody">
+                <!-- Dynamically populated -->
+              </tbody>
+            </table>
+          </div>
+        </div>
+
+        <!-- Subsystem Health Breakdown (Engine, Hydraulics, Avionics, Electrical, Airframe) -->
+        <div class="modal-section-card">
+          <div class="section-heading-wrap">
+            <h4 class="section-heading">Subsystem Health Diagnostics</h4>
+            <span class="text-xs text-muted">Simulated multi-channel telemetry score (0-100%)</span>
+          </div>
+          <div class="subsystems-grid" id="modalSubsystemsGrid">
+            <!-- Dynamically populated -->
+          </div>
+        </div>
+
+        <!-- Explainable Contributing Factors -->
+        <div class="modal-section-card">
+          <h4 class="section-heading">Explainable Risk Factors &amp; Recommendation</h4>
+          <div id="modalFactorsContainer">
+            <!-- Dynamically populated -->
+          </div>
+        </div>
+      </div>
+
+      <div class="modal-footer">
+        <button class="btn btn-outline" id="btnDetailClose">Close</button>
+        <button class="btn btn-primary" id="btnDetailCreateWo">
+          <svg class="btn-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"></path></svg>
+          Dispatch Work Order for Aircraft
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- =================================================================== -->
+  <!-- MODAL 2: CREATE WORK ORDER MODAL -->
+  <!-- =================================================================== -->
+  <div class="modal-backdrop" id="modalCreateWo" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-header">
+        <div>
+          <span class="modal-tag">MAINTENANCE DISPATCH</span>
+          <h3 class="modal-title">Create Inspection Work Order</h3>
+        </div>
+        <button class="modal-close-btn" id="btnCloseCreateWoModal" aria-label="Close dialog">&times;</button>
+      </div>
+
+      <form id="formCreateWo">
+        <div class="modal-body">
+          <div class="form-row">
+            <div class="form-group flex-1">
+              <label for="formWoAircraftSelect">Aircraft Identifier: *</label>
+              <select id="formWoAircraftSelect" class="form-control" required>
+                <!-- Populated dynamically -->
+              </select>
+            </div>
+            <div class="form-group flex-1">
+              <label for="formWoPriority">Assigned Priority: *</label>
+              <select id="formWoPriority" class="form-control" required>
+                <option value="CRITICAL">CRITICAL (Immediate Grounding)</option>
+                <option value="HIGH">HIGH (Next Flight Turnaround)</option>
+                <option value="MEDIUM">MEDIUM (Scheduled Inspection)</option>
+                <option value="LOW">LOW (Routine Servicing)</option>
+              </select>
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label for="formWoIssue">Suspected Issue / Fault Hypothesis: *</label>
+            <input type="text" id="formWoIssue" class="form-control" placeholder="e.g. Turbine Thermal Excursion & Vibration Anomaly" required>
+          </div>
+
+          <div class="form-group">
+            <label for="formWoEvidence">Telemetry Evidence / Threshold Breach: *</label>
+            <textarea id="formWoEvidence" class="form-control" rows="2" placeholder="e.g. EGT 845°C exceeds warning threshold 780°C; vibration 0.72 IPS" required></textarea>
+          </div>
+
+          <div class="form-group">
+            <label for="formWoAction">Prescribed Corrective Action: *</label>
+            <input type="text" id="formWoAction" class="form-control" placeholder="e.g. Borescope inspection of HPT Stage 2 and scavenge oil filter check" required>
+          </div>
+
+          <div class="form-row">
+            <div class="form-group flex-1">
+              <label for="formWoTeam">Assigned Maintenance Team: *</label>
+              <select id="formWoTeam" class="form-control" required>
+                <option value="Alpha Propulsion Maintenance Wing">Alpha Propulsion Maintenance Wing</option>
+                <option value="Bravo Hydraulics Technical Team">Bravo Hydraulics Technical Team</option>
+                <option value="Charlie Heavy Transport Specialist Division">Charlie Heavy Transport Specialist Division</option>
+                <option value="Delta Avionics & Instrumentation Cell">Delta Avionics & Instrumentation Cell</option>
+              </select>
+            </div>
+            <div class="form-group flex-1">
+              <label for="formWoDuration">Estimated Duration (Hours): *</label>
+              <input type="number" id="formWoDuration" class="form-control" min="1" max="100" value="12" required>
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label for="formWoParts">Required Spare Part:</label>
+            <select id="formWoParts" class="form-control">
+              <option value="NONE">No immediate replacement parts needed</option>
+              <option value="PRT-ENG-084">PRT-ENG-084 — High-Pressure Turbine Stage 2 Blade Kit</option>
+              <option value="PRT-BRG-220">PRT-BRG-220 — Engine #3 Radial Roller Bearing Assembly</option>
+              <option value="PRT-HYD-502">PRT-HYD-502 — Main Hydraulic Return Line High-Temp O-Ring Set</option>
+              <option value="PRT-SEN-091">PRT-SEN-091 — Digital Optical Oil Pressure Transducer</option>
+              <option value="PRT-NDT-114">PRT-NDT-114 — Piezoelectric Ultrasonic Transducer Probe</option>
+              <option value="PRT-ACT-310">PRT-ACT-310 — Dual-Redundant Rudder Actuator Pack</option>
+            </select>
+          </div>
+
+          <div class="form-group">
+            <label for="formWoNotes">Technician Dispatch Notes:</label>
+            <input type="text" id="formWoNotes" class="form-control" placeholder="Enter hangar bay instructions...">
+          </div>
+        </div>
+
+        <div class="modal-footer">
+          <button type="button" class="btn btn-outline" id="btnCancelCreateWo">Cancel</button>
+          <button type="submit" class="btn btn-primary">Create Work Order</button>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <!-- Toast Notification Container -->
+  <div class="toast-container" id="toastContainer" aria-live="polite"></div>
+
+  <!-- Scripts -->
+  <!-- Three.js for 3D Aircraft Visualization with 2D Canvas Fallback -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/three@0.128.0/examples/js/controls/OrbitControls.js"></script>
+  <!-- Chart.js from CDN with graceful fallback built into app.js if offline -->
+  <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.1/dist/chart.umd.min.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
